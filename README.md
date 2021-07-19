@@ -10,6 +10,10 @@ The binaries use AVX2_256 instruction sets and were compiled with Microsoft Visu
 
 When running gromacs, double click the `GMXRC.bat` file amd a command prompt will come up with the GROMACS executable and data files in PATH. From that command prompt, you can run `gmx <commands>` to run GROMACS.
 
+## Compilation details
+
+This is just the technical details of how the binaries were generated, no need to read further if you are only using the binaries.
+
 ### Requirements
 
 1. Microsoft Visual Studio 2019 (only install the compiler & toolset for Desktop development)
