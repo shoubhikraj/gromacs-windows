@@ -3,7 +3,14 @@ Precompiled Windows binaries for GROMACS are provided in the releases. These bin
 
 The binaries use AVX2_256 instruction sets and were compiled with Microsoft Visual Studio 2019 (compiler v19.28.29913) for 64-bit machines (x64).
 
-## Build procedure
+### Requirements
+
+1. Microsoft Visual Studio 2019 (only install the compiler & toolset for Desktop development)
+2. Intel MKL (from [Intel oneAPI base toolkit](https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit/download.html))
+OR,
+2. FFTW3
+
+### Build procedure
 
 Requires Microsoft Visual Studio 2019 (or 2017) and Intel MKL / FFTW3 also (optionally) Ninja
 
