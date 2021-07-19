@@ -1,7 +1,14 @@
-# gromacs-windows
+# Gromacs-windows
 Precompiled Windows binaries for GROMACS are provided in the releases. These binaries can be run on Windows machines (Windows 10 and 8, and possibly Windows 7) without any further compilation.
 
 The binaries use AVX2_256 instruction sets and were compiled with Microsoft Visual Studio 2019 (compiler v19.28.29913) for 64-bit machines (x64).
+
+## How to use:
+1) Download an archive from the [release section](https://github.com/ShoubhikRaj/gromacs-windows/releases). There are multiple versions e.g. compiled with MKL, or with FFTW. Choose the one that suits you.
+2) Unpack the archive in any location on your PC, keeping in mind that the path shouldn't ideally contain spaces, just to be safe.
+3) Download and install the Visual C++ redistributables [here](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
+
+When running gromacs, double click the `GMXRC.bat` file amd a command prompt will come up with the GROMACS executable and data files in PATH. From that command prompt, you can run `gmx <commands>` to run GROMACS.
 
 ### Requirements
 
