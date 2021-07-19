@@ -7,7 +7,7 @@ The binaries use AVX2_256 instruction sets and were compiled with Microsoft Visu
 
 1. Microsoft Visual Studio 2019 (only install the compiler & toolset for Desktop development)
 2. Intel MKL (from [Intel oneAPI base toolkit](https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit/download.html))
-OR,
+<br>OR,
 2. FFTW3
 
 ### Build procedure
