@@ -6,9 +6,8 @@ The binaries use AVX2_256 instruction sets and were compiled with Microsoft Visu
 ### Requirements
 
 1. Microsoft Visual Studio 2019 (only install the compiler & toolset for Desktop development)
-2. Intel MKL (from [Intel oneAPI base toolkit](https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit/download.html))
-<br>OR,
-2. FFTW3
+2. Intel MKL (from [Intel oneAPI base toolkit](https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit/download.html)) OR, [FFTW3](http://www.fftw.org/download.html)
+3. (Optional) [Ninja](https://mesonbuild.com/Getting-meson.html) (Get the msi installer for meson-ninja)
 
 ### Build procedure
 
