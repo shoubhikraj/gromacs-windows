@@ -38,3 +38,17 @@ cd build
 ninja -j 4
 ```
 Change the paths if you did not use the default installation paths when installing Intel oneAPI. If you do not have Ninja installed, then replace `-GNinja` with `-G"NMake Makefiles"` and at the end instead of running `ninja -j 4`, run `nmake`.
+
+If using FFTW3 library, run from "x64 Native Tools" command prompt:
+```
+set CC=cl
+set CXX=cl
+
+cmake -GNinja -S. -B./build -DGMX_GPU=off -DGMX_FFT_LIBRARY=fftw3 -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=off -DFFTWF_INCLUDE_DIR="G:/Installer/gromacs-2021.1/fftw/fftw-3.3.5-dll64" -DFFTWF_LIBRARY="G:/Installer/gromacs-2021.1/fftw/fftw-3.3.5-dll64/libfftw3f-3.lib"
+
+cd build
+ninja -j 4
+```
+The `-DFFTWF_INCLUDE_DIR` and `-DFFTWF_LIBRARY` paths have to be changed according to where you have the FFTWF files.
+
+Also not the use of front slashes in the paths, using backslash will cause issues as CMake seems to treat backslashes as escape character, even on Windows.
