@@ -7,8 +7,9 @@ The binaries use AVX2_256 instruction sets and were compiled with Microsoft Visu
 1) Download an archive from the [release section](https://github.com/ShoubhikRaj/gromacs-windows/releases). There are multiple versions e.g. compiled with MKL, or with FFTW. Choose the one that suits you.
 2) Unpack the archive in any location on your PC, keeping in mind that the path shouldn't ideally contain spaces, just to be safe.
 3) Download and install the Visual C++ redistributables [here](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
+4) (Only for the MPI version) Download and install MS-MPI v10.1.2 from [here](https://www.microsoft.com/en-us/download/details.aspx?id=100593).
 
-When running gromacs, double click the `GMXRC.bat` file amd a command prompt will come up with the GROMACS executable and data files in PATH. From that command prompt, you can run `gmx <commands>` to run GROMACS.
+When running gromacs, double click the `GMXRC.bat` file amd a command prompt will come up with the GROMACS executable and data files in PATH. From that command prompt, you can run `gmx <commands>` to run GROMACS. For the MPI-parallel version, the executable is `gmx_mpi`, but it has to be launched with MS-MP by running `mpiexec -np 4 gmx_mpi <commands>` (to run 4 parallel processes).
 
 ## Compilation details
 
@@ -52,3 +53,5 @@ ninja -j 4
 The `-DFFTWF_INCLUDE_DIR` and `-DFFTWF_LIBRARY` paths have to be changed according to where you have the FFTWF files.
 
 Also not the use of front slashes in the paths, using backslash will cause issues as CMake seems to treat backslashes as escape character, even on Windows.
+
+If compiling with MS-MPI, just add the extra flag `-DGMX_MPI=on` to the CMake build command. CMake will be able to detect MS-MPI from environment variables. Note that turning on MPI parallelisation will turn off the default thread-MPI of by GROMACS. (OpenMP parallelisation will still work)
