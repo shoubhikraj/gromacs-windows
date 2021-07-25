@@ -1,3 +1,5 @@
+![GitHub All Releases](https://img.shields.io/github/downloads/ShoubhikRaj/gromacs-windows/total)
+
 # Gromacs-windows
 Precompiled Windows binaries for GROMACS are provided in the releases. These binaries can be run on Windows machines (Windows 10 and 8, and possibly Windows 7) without any further compilation.
 
