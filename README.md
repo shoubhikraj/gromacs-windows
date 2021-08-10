@@ -60,4 +60,8 @@ If compiling with MS-MPI, just add the extra flag `-DGMX_MPI=on` to the CMake bu
 
 ----
 
-If there any problem with the binaries, feel free to post an issue.
+If there are any problems with the binaries, feel free to post an issue.
+
+---
+
+Gromacs source code and releases can be found in https://gitlab.com/gromacs/gromacs.
