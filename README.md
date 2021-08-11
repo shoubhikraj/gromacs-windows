@@ -56,7 +56,7 @@ The `-DFFTWF_INCLUDE_DIR` and `-DFFTWF_LIBRARY` paths have to be changed accordi
 
 Also not the use of front slashes in the paths, using backslash will cause issues as CMake seems to treat backslashes as escape character, even on Windows.
 
-If compiling with MS-MPI, just add the extra flag `-DGMX_MPI=on` to the CMake build command. CMake will be able to detect MS-MPI from environment variables. Note that turning on MPI parallelisation will turn off the default thread-MPI of by GROMACS. (OpenMP parallelisation will still work)
+If compiling with MS-MPI, just add the extra flag `-DGMX_MPI=on` to the CMake build command. CMake should be able to detect MS-MPI from environment variables. Note that turning on MPI parallelisation will turn off the default thread-MPI of by GROMACS. (OpenMP parallelisation will still work)
 
 ----
 
