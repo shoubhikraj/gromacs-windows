@@ -64,4 +64,4 @@ If there are any problems with the binaries, feel free to post an issue.
 
 ---
 
-Gromacs source code and releases can be found in https://gitlab.com/gromacs/gromacs.
+Gromacs source code and releases can be found in https://gitlab.com/gromacs/gromacs. The Intel MKL libraries can be obtained for free as part of the Intel oneAPI base toolkit from https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit.html.
