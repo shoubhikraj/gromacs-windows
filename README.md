@@ -6,7 +6,7 @@ Precompiled Windows binaries for GROMACS are provided in the releases. These bin
 The binaries use AVX2_256 instruction sets and were compiled with Microsoft Visual Studio 2019 (compiler v19.28.29913) for 64-bit machines (x64).
 
 ## How to use:
-1) Download an archive from the [release section](https://github.com/ShoubhikRaj/gromacs-windows/releases). There are multiple versions e.g. compiled with MKL, or with FFTW. Choose the one that suits you.
+1) Download an archive from the [release section](https://github.com/ShoubhikRaj/gromacs-windows/releases). There are multiple versions e.g. compiled with MPI, or with OpenMP. Choose the one that suits you.
 2) Unpack the archive in any location on your PC, keeping in mind that the path shouldn't ideally contain spaces, just to be safe.
 3) Download and install the Visual C++ redistributables [here](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
 4) (Only for the MPI version) Download and install MS-MPI v10.1.2 from [here](https://www.microsoft.com/en-us/download/details.aspx?id=100593).
@@ -64,4 +64,4 @@ If there are any problems with the binaries, feel free to post an issue.
 
 ---
 
-Gromacs source code and releases can be found in https://gitlab.com/gromacs/gromacs. The Intel MKL libraries can be obtained for free as part of the Intel oneAPI base toolkit from https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit.html.
+Gromacs source code and releases can be found in https://gitlab.com/gromacs/gromacs. The Intel MKL libraries can be obtained for free as part of the Intel oneAPI base toolkit from https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit.html. As Gromacs is LGPL and Intel MKL license is not compatible with that, I am not allowed to distribute binaries linked with MKL.
