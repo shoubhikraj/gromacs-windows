@@ -32,10 +32,8 @@ If using Intel MKL, run from "x64 Native Tools" command prompt in the directory 
 ```
 set CC=cl
 set CXX=cl
-set CFLAGS=-DMKL_ILP64
-set CXXFLAGS=-DMKL_ILP64
 
-cmake -GNinja -S. -B./build -DGMX_GPU=off -DGMX_FFT_LIBRARY=mkl -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=off -DMKL_INCLUDE_DIR="C:/Program Files (x86)/Intel/oneAPI/mkl/2021.1.1/include" -DMKL_LIBRARIES="C:/Program Files (x86)/Intel/oneAPI/mkl/2021.1.1/lib/intel64/mkl_intel_ilp64.lib;C:/Program Files (x86)/Intel/oneAPI/mkl/2021.1.1/lib/intel64/mkl_sequential.lib;C:/Program Files (x86)/Intel/oneAPI/mkl/2021.1.1/lib/intel64/mkl_core.lib"
+cmake -GNinja -S. -B./build -DGMX_GPU=off -DGMX_FFT_LIBRARY=mkl -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=off -DMKL_INCLUDE_DIR="C:/Program Files (x86)/Intel/oneAPI/mkl/2021.1.1/include" -DMKL_LIBRARIES="C:/Program Files (x86)/Intel/oneAPI/mkl/2021.1.1/lib/intel64/mkl_intel_lp64.lib;C:/Program Files (x86)/Intel/oneAPI/mkl/2021.1.1/lib/intel64/mkl_sequential.lib;C:/Program Files (x86)/Intel/oneAPI/mkl/2021.1.1/lib/intel64/mkl_core.lib"
 
 cd build
 ninja -j 4
