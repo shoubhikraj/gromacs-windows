@@ -56,10 +56,12 @@ Also not the use of front slashes in the paths, using backslash will cause issue
 
 If compiling with MS-MPI, just add the extra flag `-DGMX_MPI=on` to the CMake build command. CMake should be able to detect MS-MPI from environment variables. Note that turning on MPI parallelisation will turn off the default thread-MPI of by GROMACS. (OpenMP parallelisation will still work)
 
+If compiling with CUDA (if you have an Nvidia GPU), use the flag `-DGMX_GPU=CUDA` instead of `-DGMX_GPU=off`. For AMD GPU, you should use `-DGMX_GPU=OPENCL`, however, I have not tested that as I do not have access to AMD GPU.
+
 ----
 
 If there are any problems with the binaries, feel free to post an issue.
 
 ---
 
-Gromacs source code and releases can be found in https://gitlab.com/gromacs/gromacs. The Intel MKL libraries can be obtained for free as part of the Intel oneAPI base toolkit from https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit.html. As Gromacs is LGPL and Intel MKL license is not compatible with that, I am not allowed to distribute binaries linked with MKL.
+Gromacs source code and releases can be found in https://gitlab.com/gromacs/gromacs. The Intel MKL libraries can be obtained for free as part of the Intel oneAPI base toolkit from https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit.html. The FFTW libraries can also be freely obtained from http://www.fftw.org/download.html.
